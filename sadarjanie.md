@@ -6,7 +6,7 @@
 2. #### Lesson №2 (12.07.2019) - Basic variable types, basic operations, anonymous functions
 
 3. #### Lesson №3 (17.07.2019) - Mix, pipe operator
-4. ### Lesson №4 (19.07.2019) - Collections(list, tuple, keyword list, map) *collections in pipe operator* *integrated functions in modules: `Tuple, Enum, Map, List`*
+4. #### Lesson №4 (19.07.2019) - Collections(list, tuple, keyword list, map) *collections in pipe operator* *integrated functions in modules: `Tuple, Enum, Map, List`*
 
 5. #### Lesson №5 (24.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop
 6. #### Lesson №6 (26.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop (comprehension)
