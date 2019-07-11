@@ -1,4 +1,4 @@
-# Elixir course lesson №1
+# Elixir course lesson №2
 
 ## Basic variable types, basic operations, anonymous functions
 
