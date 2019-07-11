@@ -13,21 +13,21 @@ The basic types in Elixir are:
 - nil
 
 Some of their representations in the language are:
-`
+```
 iex> 1          # integer
 iex> 1.0        # float
 iex> true       # boolean
 iex> :atom      # atom
 iex> "elixir"   # string
 iex> nil        # nil
-`
+```
 
 
 #### Integer
 Integers can be represented in decimal, binary, octal and hexadecimal numeric systems, as well as with a positive and negative sign. By default it is assumed that the number is positive.
 
 ###### Example:
-`
+```
 iex(1)> 55
 55
 iex(2)> 0b110111  #The number in binary numeric system.
@@ -42,14 +42,14 @@ iex(6)> -0x77
 -119
 iex(5)> 0b110111 + 0o67 + 0x37 #Aritmetic operations are feasible between numbers of different numeric systems.
 165
-`
+```
 
 
 #### Float
 These type of numbers can be represented in two ways. The common way of representing a float, and as an exponent.
 
 ###### Example:
- `
+ ```
 iex(6)> 5.5 #common way of representing float number
 5.5
 iex(7)> 1.0e-4 #case where the exponent is returned in the common representation
@@ -62,7 +62,7 @@ iex(10)> 10.0e5 #if the number is greater than 10, the power of the exponent is 
 1.0e6
 iex(11)> 0o67 + 0x37 + 0b110111 + 5.5 + 5.5e1 #sum of values of different numeric types with float numbers 
 225.5
-`
+```
 
 
 #### Boolean
@@ -74,19 +74,19 @@ Atoms are specific values in Elixir. The value of an atom is its name. Often the
 
 
 ###### Example:
-`
+```
 iex(12)> :atom
 :atom
 iex(13)> :New_atom
 :New_atom
-`
+```
 
 
 ##### String
 A string is a UTF-8 encoded binary. Each character in the string is represented by a number of bytes, depending on their unicode value. This sometimes leads into a case where the string has a greater byte size than it's length in characters. 
 
 ###### Example:
-`
+```
 iex(14)> "foo"   
 "foo"
 iex(15)> "програмист"
@@ -111,15 +111,14 @@ iex(137)> ?L + 3.5e1
 111.0
 iex(138)> ?L + 3.5e5
 350076.0
-
-`
+```
 
 Binaries are in are a specific data type in Elixir. And are a part of it's enrichment.  Each binary value(that is a part of an Elixir binary) is represented by 8 bits. Each change into the binary's structure will lead to transforming that binary into a bitstring.
 https://cdn1.imggmi.com/uploads/2019/7/11/478eadf9b9c1f9e4c4ea9b4cd5e7dc97-full.png
 https://cdn1.imggmi.com/uploads/2019/7/11/623399b7775e48cfcc87ce8760bcab1b-full.png
 
 
-`
+```
 iex(23)> <<8::4>>
 <<8::size(4)>>
 iex(24)> <<8::3>>
@@ -128,7 +127,7 @@ iex(25)> <<256 :: utf8>> #Binary transformed into string.
 "Ā"
 iex(26)> <<1073 :: utf8>> #Binary transformed into string.
 "б"
-`
+```
 
 ##### nil
 This is the data type equivalent to NULL in other programing languages
@@ -143,7 +142,7 @@ Elixir supports all common aritmetic operations.
 
 ###### Example:
 
-`
+```
 iex(27)> 2+2  
 4
 iex(28)> 2-2
@@ -154,42 +153,48 @@ iex(30)> 2*2
 4
 iex(31)> 22 / 3
 7.333333333333333
-`
+```
 
 It is important to say that using the common divide operator, the result will always be float. If the result must be a integer value the prebuilt function `div` is needed. The remainder can be found by using another prebuilt function `rem`.
 
 ###### Example:
 
-`
+```
 iex(32)> div(10,3)
 3
 iex(33)> rem(10,3)
 1
-`
+```
 
 
 ###### Boolean operations
-`
+
 ---can be used with any data type
+```
 iex> ||   #or
 iex> &&   #and
 iex> !    #not
+```
 
 ---these bellow require boolen value on their left side
+```
 iex> and   
 iex> or   
 iex> not    
+```
 
 ---using an aditional module `Bitwise` calculations on bits are possible
+```
 &&& - AND
 <<< - left bitshift
 >>> - right bitshift
 ^^^ - XOR
 ||| - OR
+```
 
 ###### Example:
 
-`
+```
 iex> -20 || true
 -20
 iex> false || 42
@@ -215,12 +220,12 @@ iex> 42 and true
 ** (ArgumentError) argument error: 42
 iex> not 42
 ** (ArgumentError) argument error
-`
+```
 
 ###### Comparison operations
 All of the Elixir's comparison operators, use left to right associativity. It is possible to compare values of different types.
 
-`
+```
 == - equality
 === - strict equality
 != - inequality
@@ -229,11 +234,11 @@ All of the Elixir's comparison operators, use left to right associativity. It is
 > - greater than
 <= - less than or equal
 >= - greater than or equal
-`
+```
 
 ###### Example:
 
-`
+```
 iex(28)> :p > 5
 true
 iex(29)> :p > "a"
@@ -244,9 +249,9 @@ iex(31)> "w" > 'w'
 true
 iex(32)> "w" > 2.0
 true
-`
+```
 
-`
+```
 iex(7)> 2.0 > 2
 false
 iex(8)> 2.0 < 2
@@ -255,23 +260,25 @@ iex(9)> 2.0 == 2
 true
 iex(10)> 2.0 === 2
 false
-`
+```
 
 Atoms are equal if their names are equal.
 
+```
 iex> :apple == :apple
 true
 iex> :apple == :orange
 false
+```
 
 The atoms `:true` and `:false` are boolean and the same as the boolean values `true` and `false`.
 
-`
+```
 iex(3)> :true === true
 true
 iex(4)> :false === false
 true
-`
+```
 
 
 ###### String concatenation and interpolation
@@ -281,7 +288,7 @@ Strings in Elixir can have line breaks.
 
 ###### Example:
 
-`
+```
 iex(39)> name = "Todor"     
 "Todor"
 iex(40)> surname = "Todorov"            
@@ -297,7 +304,8 @@ Todor
 Todorov
 Elixir developer
 :ok
-`
+```
+
 `IO.puts` is a function for printing value into the screen, it's equivalents in other languages are cout, console.log, printf, etc.
 
 
@@ -308,14 +316,14 @@ Elixir developer
 ### Anonymous functions
 
 Structure:
-`
+```
 fn(parameters) -> body end
-`
+```
 The can be assigned to a variable, which will then allow access to that anonymous function. 
 
 ###### Example:
 
-`
+```
 iex(57)> add = fn a, b -> a + b end 
 #Function<12.99386804/2 in :erl_eval.expr/5>
 iex(58)> add.(8,9)
@@ -324,13 +332,13 @@ iex(59)> double = fn a -> add.(a,a) end #function in function
 -#Function<6.99386804/1 in :erl_eval.expr/5>
 iex(60)> double.(4)  #access an anonymnous function
 8
-`
+```
 
 A function can have myltiple bodies, which are separated from the others, by the arguments that are passed to the function. The passed atguments must be the same number.
 
 ###### Example:
 
-`
+```
 iex(1)> fun = fn                                                    
 ...(1)> (:hi) -> IO.puts "Hi."                                      
 ...(1)> (:здрасти) -> IO.puts "Здрасти."                            
@@ -346,31 +354,31 @@ iex(3)> fun.(:здрасти)
 iex(4)> fun.(:Добър_ден)
 I preferДобър_ден
 :ok
-`
+```
 
 There is a shortened way of presenting anonymous functions.
 
 ###### Example:
 
-`
+```
 iex(2)> sum = &(&1 + &2)
 &:erlang.+/2
 iex(3)> sum.(2,3)
 5
-`
+```
 
 A function can return a function
 
 ###### Example:
 
-`
+```
 iex(4)> fun1 = fn -> fn -> "Hello" end end
 #Function<20.99386804/0 in :erl_eval.expr/5>
 iex(5)> fun1.()
 #Function<20.99386804/0 in :erl_eval.expr/5>
 iex(6)> fun1.().()
 "Hello"
-`
+```
 
 
 
@@ -379,7 +387,7 @@ The data values in Elixir are immutable. In order to store a new value, one must
 
 ###### Example:
 
-`
+```
 iex(56)> string = "test"            
 "test"
 iex(57)> string <> "1"
@@ -392,7 +400,7 @@ iex(60)> (fn -> x = 0 end).()
 0
 iex(61)> x
 42
-`
+```
 
 
 
@@ -403,13 +411,13 @@ Those that are undone, are assigned as a homework.
 1. Create a function that returns the single or the plural word for a 'person' based on the number provided as an argument.
 
 2. Write a function that takes three arguments. If the first two are zero, return “FizzBuzz.” If the first is zero, return “Fizz.” If the second is zero, return “Buzz.” Otherwise return the third argument.
-`
+```
 Arguments	Result
 0, 0, 5	“FizzBuzz”
 0, 1, 2	“Fizz”
 1, 0, 2	“Buzz”
 1, 1, “Test”	“Test”
-`
+```
 
 3. Write an anonymous function called concatenate, which take two strings and returns as a result of their concatenation. 
 
