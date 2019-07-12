@@ -425,14 +425,15 @@ Arguments	Result
 4. Write a function that takes two strings. If the length of the first in greater than the length of the second return `true`. If it is the opposite, return `false`.
 
 Use documentation String - https://hexdocs.pm/elixir/String.html
-5. The string "wonderful" if given. That is it's length, which letter is his third one, Transform it into "Wonderful".
+
+5. The string "wonderful" is given. That is it's length, which letter is his third one, Transform it into "Wonderful".
 
 6. The string "I hate homework" is given. Replace the space with "." (I.hate.homework) . Wrtie it backwards ("krowemoh evol I").
 
 
 
 - Write your solutions in a .txt file
-- Create a github repo(preferably a private one), it will be used to store you homeworks.
+- Create a github repo(preferably a private one), it will be used to store your homeworks.
 - Push the txt into the repo.
 - Assign me as a collaborator, so that I can see the files.
 
