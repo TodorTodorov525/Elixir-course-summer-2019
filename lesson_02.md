@@ -132,8 +132,10 @@ iex(26)> <<1073 :: utf8>> #Binary transformed into string.
 ##### nil
 This is the data type equivalent to NULL in other programing languages
 
+```
 iex(111)> nil
 nil
+```
 
 ### Basic operations
 Elixir supports all common aritmetic operations.
@@ -169,21 +171,21 @@ iex(33)> rem(10,3)
 
 ###### Boolean operations
 
----can be used with any data type
+can be used with any data type
 ```
 iex> ||   #or
 iex> &&   #and
 iex> !    #not
 ```
 
----these bellow require boolen value on their left side
+these bellow require boolen value on their left side
 ```
 iex> and   
 iex> or   
 iex> not    
 ```
 
----using an aditional module `Bitwise` calculations on bits are possible
+using an aditional module `Bitwise` calculations on bits are possible
 ```
 &&& - AND
 <<< - left bitshift
