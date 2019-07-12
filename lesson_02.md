@@ -157,7 +157,7 @@ iex(31)> 22 / 3
 7.333333333333333
 ```
 
-It is important to say that using the common divide operator, the result will always be float. If the result must be a integer value the prebuilt function `div` is needed. The remainder can be found by using another prebuilt function `rem`.
+It is important to say that using the common divide operator, the result will always be float. If the result must be an integer value the prebuilt function `div` is needed. The remainder can be found by using another prebuilt function `rem`.
 
 ###### Example:
 
