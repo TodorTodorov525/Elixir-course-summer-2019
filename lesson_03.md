@@ -34,7 +34,7 @@ iex(27)> t #tail
 [2, 3]
 ```
 
- =The symbol `|` is used for embedding a list's values into another list. This lieads to the notation `[Term1,...,TermN]` being equivalent to `[Term1|[...|[TermN|[]]]]`.
+ The symbol `|` is used for embedding a list's values into another list. This lieads to the notation `[Term1,...,TermN]` being equivalent to `[Term1|[...|[TermN|[]]]]`.
 
 Example:
 
@@ -351,9 +351,9 @@ Difference between keyword list and map.
 │ Duplicate keys   │ yes          │ no         │
 │ Ordered          │ yes          │ no         │
 │ Pattern matching │ yes          │ yes        │
-│ Performance¹     │ —            │ —          │
-│ ├ Insert         │ very fast²   │ fast³      │
-│ └ Access         │ slow⁵        │ fast³      │
+│ Performance      │ —            │ —          │
+│ ├ Insert         │ very fast    │ fast       │
+│ └ Access         │ slow         │ fast       │
 └──────────────────┴──────────────┴────────────┴
 ```
 
@@ -397,7 +397,8 @@ is this valid -> `[{key: "pair"}, {fruit: apple}]`
 
 4. Create functions that does the following:
 ```
-to_tuple.([2, 3], [4, 5])	[{2, 4}, {3, 5}]
+to_tuple.([2, 3], [4, 5])	[{2, 3}, {4, 5}]
+to_tuple2.([2, 3], [4, 5])	[{2, 4}, {3, 5}]
 to_keyword_list.({:a, :b, :c}, {1, 2, 3})	[a: 1, b: 2, c: 3]
 ```
 

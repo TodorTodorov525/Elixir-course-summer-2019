@@ -121,11 +121,10 @@ Write a function, that when receives that map, returns the string “Hello, Alic
 
 2. Create a function “length_of_tuple”, that returns the number of elements in a tuple.
 If they are more than 4, return the string “Shouldn’t you use list?”
-Use the pipe operator and a new function for printing the messages on the screen.
 
-3. You have the numbers from 1 to 100, using pipe, select all the even number, excluding 100. Then from that list, remove the numbers divisible by 3. Then mupltiply every second number by 100. Finally combine the numbers into pairs of 3
+3. Given a list of years: `[1994, 600, 1965, 0, 1, 2019, 2008, 1921, 1936, 1414, 2000, 1992, 2004]`, using `Enum.filter` remove every year, that is not from the 21st century
 
-4. Given a list of years: `[1994, 600, 1965, 0, 1, 2019, 2008, 1921, 1936, 1414, 2000, 1992, 2004]`, using `Enum.filter` remove every year, that is not from the 21st century
+4. You have the numbers from 1 to 100, using pipe, select all the even number, excluding 100. Then from that list, remove the numbers divisible by 3. Then mupltiply every second number by 100. 
 
 5. Given a list: `[%{name: “Donald”, age: 10}, %{name: “Jerry", age: 21}, %{name: "Tom", age: 24}]` remove everyone, that should not be allowed to drink alchohol
 
