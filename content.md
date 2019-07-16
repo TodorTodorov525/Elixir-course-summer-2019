@@ -5,8 +5,9 @@
 #### 1.  Lesson №1 (10.07.2019) - Introduction to Elixir, github commands, [iex shell]
 #### 2.  Lesson №2 (12.07.2019) - Basic variable types, basic operations, anonymous functions
 
-#### 3.  Lesson №3 (17.07.2019) - Mix, pipe operator
-#### 4.  Lesson №4 (19.07.2019) - Collections(list, tuple, keyword list, map) *collections in pipe operator* *integrated functions in modules: `Tuple, Enum, Map, List`*
+#### 3.  Lesson №3 (19.07.2019) - Collections(list, tuple, map,  keyword list)
+#### 4.  Lesson №4 (17.07.2019) - Mix, pipe operator, Enum
+
 
 #### 5.  Lesson №5 (24.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop
 #### 6.  Lesson №6 (26.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop (comprehension)

@@ -185,6 +185,7 @@ iex> or
 iex> not    
 ```
 
+
 using an aditional module `Bitwise` calculations on bits are possible
 ```
 &&& - AND
