@@ -146,7 +146,7 @@ Exercises:
 - match `1` from the nested_list
 - match `2` from the nested_list
 
-3. Let’s write a function that adds 1 to every element in the list. The elements are numeric values (integer, float).
+3. Write a function that adds 1 to every element in the list. The elements are numeric values (integer, float).
 
 4. Write a function that calculates the perimeter of a triangle. It should work if the side's lengths are passed as separate arguments, in a tuple, in a list, or in a map.
 Example of map structure: %{a: value_a, b: value_b, c: value_c}
