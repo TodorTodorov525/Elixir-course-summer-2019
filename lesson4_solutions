@@ -1,0 +1,54 @@
+1.
+  def ex1(%{first_name: fname, second_name: sname, age: age}) do
+    "Hello, #{fname} #{sname}"
+  end 
+
+2. 
+    def ex2(param) do
+    tuple_size(param) |> print_message()
+  end
+
+  def print_message(num) do
+    print = fn
+      0 -> IO.puts("OK")
+      1 -> IO.puts("OK")
+      2 -> IO.puts("OK")
+      3 -> IO.puts("OK")
+      _ -> IO.puts("Shouldn’t you use list?")
+    end
+
+    print.(num)
+  end
+  
+  
+length_of_tuple = fn 
+ {a} -> 1
+ {a,b} -> 2
+ {a,b,c} -> 3
+ {a,b,c,d} -> 4 
+ _ -> "Shouldn't you use a list"
+ end
+
+
+3.
+  def ex3 do
+    numbers = 1..100
+    list = Enum.to_list(numbers)
+
+    z =
+      Enum.filter(list, fn num -> rem(num, 2) == 0 && num != 100 end)
+      |> Enum.filter(fn num -> rem(num, 3) != 0 end)
+      |> Enum.map_every(2, fn num -> num * 100 end)
+  end
+  
+4.
+   def ex4 do
+    years = [1994, 600, 1965, 0, 1, 2019, 2008, 1921, 1936, 1414, 2000, 1992, 2004]
+    Enum.filter(years, fn year -> year >= 2000 end)
+  end
+  
+5. 
+  def ex5 do
+    peope = [%{name: "Donald", age: 10}, %{name: "Jerry", age: 21}, %{name: "Tom", age: 24}]
+    Enum.filter(peope, fn person -> person.age > 18 end)
+  end

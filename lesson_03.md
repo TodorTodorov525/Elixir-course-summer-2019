@@ -34,7 +34,7 @@ iex(27)> t #tail
 [2, 3]
 ```
 
- The symbol `|` is used for embedding a list's values into another list. This lieads to the notation `[Term1,...,TermN]` being equivalent to `[Term1|[...|[TermN|[]]]]`.
+ The symbol `|` is used for embedding a list's values into another list. This leads to the notation `[Term1,...,TermN]` being equivalent to `[Term1|[...|[TermN|[]]]]`.
 
 Example:
 
@@ -159,7 +159,7 @@ iex(44)> length(list)
 
 ### Tuple
 
-Tuples are a collection in which the values are store successively in the memory. Retrieving data and about the values or the tuple itself is rather cheap, but modifications are expensive, because when an element is added or removed or a value modified, Elixir creates a copy of the whole tuple with values updated after the modification. Tuples are defined with curly brackets. Often tuples are used as a mechanism for returning information about the succes of a function.
+Tuples are a collection in which the values are stored successively in the memory. Retrieving data and about the values or the tuple itself is rather cheap, but modifications are expensive, because when an element is added or removed or a value modified, Elixir creates a copy of the whole tuple with values updated after the modification. Tuples are defined with curly brackets. Often tuples are used as a mechanism for returning information about the succes of a function.
 
 Example:
 
@@ -278,7 +278,7 @@ iex(10)> m[<<1>>]
 1                        
 ```
 
-Maps are not ordered.
+Maps are not ordered.of
 
 
 

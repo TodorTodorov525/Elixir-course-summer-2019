@@ -10,7 +10,7 @@ Mix is used for all elixir related processes that preceed the "deployment to pro
 
 #### Elixir module
 
-A module is being defined by the `defmodule` keyword, succeeded by the module name and the `do` keyword, a elixir module always ends with an `end`. The Elixir's coding standarts suggest separating each module of the project in a separate file, the Elixir file modules have an `.ex` extention. These files are where Elixir functions beign written.
+A module is being defined by the `defmodule` keyword, succeeded by the module name and the `do` keyword, an elixir module always ends with an `end`. The Elixir's coding standarts suggest separating each module of the project in a separate file, the Elixir file modules have an `.ex` extention. These files are where Elixir functions beign written.
 
 ```
 ### Elixir module
@@ -124,9 +124,9 @@ If they are more than 4, return the string “Shouldn’t you use list?”
 
 3. Given a list of years: `[1994, 600, 1965, 0, 1, 2019, 2008, 1921, 1936, 1414, 2000, 1992, 2004]`, using `Enum.filter` remove every year, that is not from the 21st century
 
-4. You have the numbers from 1 to 100, using pipe, select all the even number, excluding 100. Then from that list, remove the numbers divisible by 3. Then mupltiply every second number by 100. 
+4. You have the numbers from 1 to 100, using pipe, select all the even number, excluding 100. Then from that list, remove the numbers divisible by 3. Then mupltiply every second number by 100. Use ranges!
 
-5. Given a list: `[%{name: “Donald”, age: 10}, %{name: “Jerry", age: 21}, %{name: "Tom", age: 24}]` remove everyone, that should not be allowed to drink alchohol
+5. Given a list: `[%{name: "Donald", age: 10}, %{name: "Jerry", age: 21}, %{name: "Tom", age: 24}]` remove everyone, that should not be allowed to drink alchohol
 
 
 # Homework 
