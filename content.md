@@ -9,11 +9,12 @@
 #### 4.  Lesson №4 (17.07.2019) - Mix, pipe operator, Enum
 
 
-#### 5.  Lesson №5 (24.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop
-#### 6.  Lesson №6 (26.07.2019) - Operators/Control structures (if, cond, case, with), simulation of a 'for' loop (comprehension)
+#### 5.  Lesson №5 (24.07.2019) - Operators/Control structures (if, unless cond, case), 'with' comprehension | Simulation of a 'for' loop using interpolation and comprehension | guards
 
-#### 7.  Lesson №7 (31.07.2019) - *Combining everything in a module*
-#### 8.  Lesson №8 (02.08.2019) - `*Alias Import, Use* | *Struct*` 
+#### 6.  Lesson №6 (26.07.2019) - Operators/Control structures (if, unless cond, case), 'with' comprehension | Simulation of a 'for' loop using interpolation and comprehension | guards
+
+#### 7.  Lesson №7 (31.07.2019) - Recursion
+#### 8.  Lesson №8 (02.08.2019) - Module inheritance (Alias Import, Use) | Struct 
 
 #### 9.  Lesson №9 (07.08.2019) - Recursion, *pattern matching*
 #### 10.  Lesson №10 (09.08.2019) - *Writing integrated documentation in functions* | `*specs, typedoc*`
