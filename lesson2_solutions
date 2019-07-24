@@ -1,4 +1,4 @@
-1.
+1. Create a function that returns the single or the plural word for a 'person' based on the number provided as an argument.
 maybe_pluralize = fn
   1 -> "person"
   _ -> "people"

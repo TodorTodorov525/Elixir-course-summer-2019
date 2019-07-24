@@ -16,7 +16,7 @@
 #### 7.  Lesson №7 (31.07.2019) - Recursion
 #### 8.  Lesson №8 (02.08.2019) - Module inheritance (Alias Import, Use) | Struct 
 
-#### 9.  Lesson №9 (07.08.2019) - Recursion, *pattern matching*
+#### 9.  Lesson №9 (07.08.2019) - *Recursion, *pattern matching**
 #### 10.  Lesson №10 (09.08.2019) - *Writing integrated documentation in functions* | `*specs, typedoc*`
 
 #### 11.  Lesson №11 (14.08.2019) - Processes, receive do

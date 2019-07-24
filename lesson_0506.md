@@ -732,24 +732,24 @@ iex> Greeter.hello ["Sean", "Steve"], "es"
 
 2. Implement a function, that when given a list and a symbol, creates a string, that contains all the elements in the list, joined by the symbol you provided
 ```
-zad2([1,2,3,4], ",")
+ex2([1,2,3,4], ",")
 "1,", "2,", "3,", "4,"]
 ```
     
 3. Implement a function, that given a list, an integer, and a value, returns the item, that is at the integer’s position in the list, and if the list has less elements than the list, return the value
 ```
-zad3([1,2,3], 2, 100)
+ex3([1,2,3], 2, 100)
  3
 
-zad3([1,2,3], 4, 100)
+ex3([1,2,3], 4, 100)
  100
 ```
 
 4. Implement a function, that given a list and an integer (n), returns the first n elements from the list. If the length of the list is less than n, return the whole list
 ```
-zad4([1,2,3], 2)
+ex4([1,2,3], 2)
  [1,2]
-zad4([1,2,3], 540)
+ex4([1,2,3], 540)
  [1,2,3]
 ```
 
