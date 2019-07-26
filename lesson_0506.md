@@ -25,7 +25,7 @@ Elixir, as a functional programming language, normally follows declarative progr
 However, we have tools to control a flow in Elixir and it is always good to know them.
 
 
-### "If"
+### If
 
 The syntax of an if statement is as follows:
 ```
@@ -198,7 +198,7 @@ iex(1)> TestRpoejct.fun3
 
 ### Cond
 
-Elixir doesnt provide us with an easy syntax for making **if else** conditional operations in its standart syntax. The way it is done is by using `cond` statement, which allows us to check multiple outcomes of an particular action and do different things depending on its result. The `cond` will execute where the first condition is met, a default condition `true` must be specified in order to hadle all of the situations in which we have not matched any of the upper conditions.  
+Elixir doesnt provide us with an easy syntax for making **if else** conditional operations in its standart syntax. The way it is done is by using `cond` statement, which allows us to check multiple outcomes of a particular action and do different things depending on its result. The `cond` will execute where the first condition is met, a default condition `true` must be specified in order to handle all of the situations in which we have not matched any of the upper conditions.  
 
 Cond statements are used where we want to execute a code on the basis of several
 conditions. It works like an if....else construct in several other programming
@@ -267,7 +267,7 @@ iex> cond do
 "ok"
 ```
 
-#### Case
+### Case
 
 
 `Case` statement can be considered as a replacement for the **switch** statement in
@@ -369,7 +369,7 @@ iex> case "cherry pie" do
 "I bet cherry pie is tasty"
 ```
 
-#### With
+### With
 
 `With` is used to combine matching clauses. By default the comprehension handles functions which return results in the following tuples:
 ```
@@ -416,31 +416,6 @@ end
 {:ok, "admin"}
 ```
 
-#### Interpolation
-
-Due to the language's immutability, Elixir doesn't provide us with the standart common implementation of a for loop. As a result one of the ways to implement a for loop is by using recursion.
-
-```
-defmodule Loop do
-  def puts_times(0, _message) do
-    # Recursion terminator
-  end
-
-  def puts_times(n, message) do
-    IO.puts message
-    puts_times(n - 1, message)
-  end
-end
-
-iex> Loop.puts_times(5, "Hello Loop!")
-Hello Loop!
-Hello Loop!
-Hello Loop!
-Hello Loop!
-Hello Loop!
-nil
-```
-
 #### Comprehension
 
 One of the ways to implement a **foreach** loop in Elixir is by using comprehensions. They iterate through an enumerable, and retrun a list containg the results of the operation.
@@ -458,7 +433,7 @@ element <- enumerable
 ```
 is called a **generator**.
 
-Similarly to the conditional operators the comprehansions relies heavily on pattern matching for operationg with values of an enumerable.
+Similarly to the conditional operators the comprehensions relies heavily on pattern matching for operationg with values of an enumerable.
 
 ```
 iex> for {:ok, val} <- [ok: "Hello", error: "Unknown", ok: "World"], do: val
@@ -733,7 +708,7 @@ iex> Greeter.hello ["Sean", "Steve"], "es"
 2. Implement a function, that when given a list and a symbol, creates a string, that contains all the elements in the list, joined by the symbol you provided
 ```
 ex2([1,2,3,4], ",")
-"1,", "2,", "3,", "4,"]
+["1,", "2,", "3,", "4,"]
 ```
     
 3. Implement a function, that given a list, an integer, and a value, returns the item, that is at the integer’s position in the list, and if the list has less elements than the list, return the value
@@ -764,6 +739,12 @@ Write a comprehension that combines each title with each name
 Build upon the previous comprehension, giving the “Mrs ” title if the last name ends on “a”, otherwise use the other one
 
 6. Write a function which checks the number of elements in a tuple, if ther are more than 4 it should return "Shouldn't you use a list."
+
+7. Write a function that takes a list of numbers and calculates the product of all of them.
+
+8. Write a function takes a lsit of numbers and returns a new list containing only the even numbers.
+
+9. Write a function that takes a list of strings and concatenates all of them.
 
 # Homework
 
@@ -802,3 +783,62 @@ Bonus: Use conditional operators.
 - If it receives a tuple with one elemnt and it is greater than 4, it should the return the element.
 
 8. Write a function that takes a tuple as an argument, and using a conditional operator by your choice, it should return the first element if it is greater than the second. In other case, the sum of the second and third.
+
+9. You have a structure containing a few football teams, write a function that takes the team names and result and updates the player's stats. 
+Make the code to work even if the names of teams are changed or if there are more than two teams in the database. If the names of the teams are present in the struct, the match can be made.
+You are free to structure the code the way you want.
+
+Rules:
+  - if team scored 1 - goals is for atk
+  - if team scored 2 - 2 goals are for atk
+  - if a team scored 3 - 2 goals are for atk one for mid,
+  - if team scored 4 - 2 goals are for atk one for mid, one for def
+  - if team conceed a goal - gk is -1
+
+  ```
+  %{
+    "Red" => %{
+      "gk" => {"Ali Baba", 28, "right", 0},
+      "def" => {"Ivan Ivanov", 34, "right", 0},
+      "mid" => {"Eli Marques", 22, "left", 0},
+      "atk" => {"Valeri Bozhinov", 35, "right", 0}
+    },
+    "Blue" => %{
+      "gk" => {"Zdravko Zdravkov", 48, "left", 0},
+      "def" => {"Elin Topuzakov", 42, "left", 0},
+      "mid" => {"Obi-Wan Kenobi", 18, "right", 0},
+      "atk" => {"Cherno Samba", 32, "left", 0}
+    },
+    "Green" => %{
+      "gk" => {"Ilko Pirgov", 22, "left", 0},
+      "def" => {"Jackie Chan", 25, "left", 0},
+      "mid" => {"Hali Thiam", 33, "right", 0},
+      "atk" => {"Big Shaq", 20, "left", 0}
+    }
+  }
+  ```
+
+
+  ```
+  "Red" beats "blue" 2-1 !
+  %{
+    "Red" => %{
+      "gk" => {"Ali Baba", 28, "right", -1},
+      "def" => {"Ivan Ivanov", 34, "right", 0},
+      "mid" => {"Eli Marques", 22, "left", 0},
+      "atk" => {"Valeri Bozhinov", 35, "right", 2}
+    },
+    "Blue" => %{
+      "gk" => {"Zdravko Zdravkov", 48, "left", -2},
+      "def" => {"Elin Topuzakov", 42, "left", 0},
+      "mid" => {"Obi-Wan Kenobi", 18, "right", 0},
+      "atk" => {"Cherno Samba", 32, "left", 1}
+    },
+    "Green" => %{
+      "gk" => {"Ilko Pirgov", 22, "left", 0},
+      "def" => {"Jackie Chan", 25, "left", 0},
+      "mid" => {"Hali Thiam", 33, "right", 0},
+      "atk" => {"Big Shaq", 20, "left", 0}
+    }
+  }
+  ```
