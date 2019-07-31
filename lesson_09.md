@@ -1,6 +1,6 @@
 # Elixir course lesson №9
 
-## Writing integrated documentation (doc, moduledoc, spec, typedoc, 
+## Writing integrated documentation (doc, moduledoc, spec, typedoc) 
 
 
 #### doc
