@@ -14,19 +14,18 @@
 #### 6.  Lesson №6 (26.07.2019) - Operators/Control structures (if, unless cond, case), 'with' comprehension | Simulation of a 'for' loop using interpolation and comprehension | guards
 
 #### 7.  Lesson №7 (31.07.2019) - Recursion
-#### 8.  Lesson №8 (02.08.2019) - Module inheritance (Alias Import, Use) | Struct 
+#### 8.  Lesson №8 (07.08.2019) - Module inheritance (Alias Import, Use) | Struct 
+#### 9.  Lesson №9 (07.08.2019) - Writing integrated documentation (doc, moduledoc, spec, typedoc) 
 
-#### 9.  Lesson №9 (07.08.2019) - *Recursion, *pattern matching**
-#### 10.  Lesson №10 (09.08.2019) - *Writing integrated documentation in functions* | `*specs, typedoc*`
 
-#### 11.  Lesson №11 (14.08.2019) - Processes, receive do
-#### 12.  Lesson №12 (16.08.2019) - spawn link?
+#### 11.  Lesson №10 (14.08.2019) - Processes, receive do
+#### 12.  Lesson №11 (16.08.2019) - spawn link?
 
-#### 13.  Lesson №13 (21.08.2019) - GenServer
-#### 14.  Lesson №14 (23.08.2019) - GenServer part 2
+#### 13.  Lesson №12 (21.08.2019) - GenServer
+#### 14.  Lesson №13 (23.08.2019) - GenServer part 2
 
-#### 15.  Lesson №15 (28.08.2019) - Supervisor
-#### 16.  Lesson №16 (30.08.2019) - Application with multiple workers(probably gen servers) and a supervisor
+#### 15.  Lesson №14 (28.08.2019) - Supervisor
+#### 16.  Lesson №15 (30.08.2019) - Application with multiple workers(probably gen servers) and a supervisor
 
-#### 17.  Lesson №17 (04.09.2019) - Additional libraries, hex docs
-#### 18.  Lesson №18 (06.09.2019) - *Ecto, Phoenix, Nerves*
+#### 17.  Lesson №16 (04.09.2019) - Additional libraries, hex docs
+#### 18.  Lesson №17 (06.09.2019) - *Ecto, Phoenix, Nerves*
