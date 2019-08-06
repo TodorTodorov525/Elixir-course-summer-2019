@@ -18,14 +18,14 @@
 #### 9.  Lesson №9 (07.08.2019) - Writing integrated documentation (doc, moduledoc, spec, typedoc) 
 
 
-#### 11.  Lesson №10 (14.08.2019) - Processes, receive do
-#### 12.  Lesson №11 (16.08.2019) - spawn link?
+#### 10.  Lesson №10 (14.08.2019) - Processes, agents, tasks
+#### 11  Lesson №11 (16.08.2019) - spawn link?
 
-#### 13.  Lesson №12 (21.08.2019) - GenServer
-#### 14.  Lesson №13 (23.08.2019) - GenServer part 2
+#### 12.  Lesson №12 (21.08.2019) - GenServer
+#### 13.  Lesson №13 (23.08.2019) - GenServer part 2
 
-#### 15.  Lesson №14 (28.08.2019) - Supervisor
-#### 16.  Lesson №15 (30.08.2019) - Application with multiple workers(probably gen servers) and a supervisor
+#### 14.  Lesson №14 (28.08.2019) - Supervisor
+#### 15.  Lesson №15 (30.08.2019) - Application with multiple workers(probably gen servers) and a supervisor
 
-#### 17.  Lesson №16 (04.09.2019) - Additional libraries, hex docs
-#### 18.  Lesson №17 (06.09.2019) - *Ecto, Phoenix, Nerves*
+#### 16.  Lesson №16 (04.09.2019) - Additional libraries, hex docs
+#### 17.  Lesson №17 (06.09.2019) - *Ecto, Phoenix, Nerves*
