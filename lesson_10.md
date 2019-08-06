@@ -217,9 +217,3 @@ the list"}. If there are items, after returning the first one, it should call it
 receive a message, and if there are no errors, it returns the recieved item.
 10. Create a separate function for each message
 ```
-
-
-
-Да се направи mix проект, който да прави заявки към https://docs.openaq.org . Трябва да се избере една държава, да се вземат всички измервания за съответна държава и да се изкара на екрана най-замърсеният и най-чистиият градове.
-Да се оптимизира чрез процеси.
-Да се добави библиотеката httpoison. заявките да се имплементират чрез елексир.
