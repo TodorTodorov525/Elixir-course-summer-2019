@@ -1,0 +1,133 @@
+  def calc({a, b, c}) do
+    des = b * b - 4 * a * c
+    x1 = (-b + :math.sqrt(des)) / 2 * a
+    x2 = (-b - :math.sqrt(des)) / 2 * a
+    {x1, x2}
+  end
+
+  def calc({b, c}) do
+    x1 = c / b
+    {x1, x1}
+  end
+
+  def quadratic_if({a, b, c}) do
+    if b * b >= 4 * a * c and a != 0 do
+      calc({a, b, c})
+    else
+      if a == 0 do
+        calc({b, c})
+      else
+        "nyama realni koreni"
+      end
+    end
+  end
+
+  def quadratic_cond({a, b, c}) do
+    cond do
+      b * b >= 4 * a * c and a != 0 ->
+        calc({a, b, c})
+
+      a == 0 ->
+        calc({b, c})
+
+      true ->
+        "nyama realni koreni"
+    end
+  end
+
+  def quadratic_case({a, b, c}) do
+    case {a, b, c} do
+      {0, _, _} -> calc({b, c})
+      {a, b, c} when b * b >= 4 * a * c -> calc({a, b, c})
+      true -> "nyama realni koreni"
+    end
+  end
+
+
+  def quadratic_check({a, b, c}) do
+    cond do
+      b * b >= 4 * a * c and a != 0 -> {a, b, c}
+      a == 0 -> {b, c}
+      true -> {:error, "nyama realni koreni"}
+    end
+  end
+
+  def quadratic_with(params) do
+    with params when is_tuple(params) <- quadratic_check(params),
+         result when is_tuple(params) <- calc(params) do
+      {params, result}
+    else
+      err -> err
+    end
+  end
+
+
+-----------------------------------------------------------------------------------------
+
+def zad2(list, separator) do
+    for elem <- list do
+      "#{elem}#{separator}"
+    end
+  end
+
+  def zad3(list, int, value) when is_list(list) and is_integer(int) and is_integer(value) do
+    if length(list) > int do
+      Enum.at(list, int)
+    else
+      value
+    end
+  end
+
+  def zad3(list, int, value), do: "Wrong argument types!"
+
+  def zad4(list, int) when is_list(list) and is_integer(int) do
+    Enum.take(list, int)
+  end
+
+  def zad4(list, int), do: "Wrong argument types!"
+
+  def zad5(list) do
+    for elem <- list, String.length(elem) >= 5 do
+      String.upcase(elem)
+    end
+  end
+
+  def zad5_names do
+    titles = ["Mr. ", "Mrs. "]
+    names = ["Ivan Georgiev", "Nikola Nikolov", "Antoaneta Velieva"]
+
+    for elem <- titles do
+      for el <- names do
+        "#{elem} #{el}"
+      end
+    end
+  end
+
+  def zad5_names_up do
+    titles = ["Mr. ", "Mrs. "]
+    names = ["Ivan Georgiev", "Nikola Nikolov", "Antoaneta Velieva"]
+
+    [males] =
+      for elem <- titles, elem == "Mr. " do
+        for el <- names, String.at(el, -1) != "a" do
+          "#{elem} #{el}"
+        end
+      end
+
+    [females] =
+      for elem <- titles, elem != "Mr. " do
+        for el <- names, String.at(el, -1) == "a" do
+          "#{elem} #{el}"
+        end
+      end
+
+    [males, females]
+  end
+  
+  
+    def zad6(tuple) do
+    case tuple do
+      tuple when tuple_size(tuple) > 4 -> "shouldnt you use a list"
+      _ -> "tuple is ok"
+    end
+  end
