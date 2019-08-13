@@ -155,14 +155,20 @@ def terminate(reason, state) do
 end
 ```
 
+Good to knows:
+If a new instance of GenServer is made it will have its own state.
+GenServer cannot initiate calls passing his own ID.
+The shell is its own process, through it calls to the GenServer's parent ID can be made. 
+The only way to implement a GenServer which shall call itself is by the creation of an linked process in which the new procedure call will be made.
+
 https://elixir-lang.org/cheatsheets/gen-server.pdf
 
-#Exercises:
+# Exercises:
 
 1. Implement a GenServer which shall synchroniusly add in a state map a key value pair ex: "a" => 1 and asynchronicaly messages in a list which can be accessed through a key named "async". Implement a gracefull shutdown and a print.
 
 
-2. Два сървъра които да си викат функционалност и да си предават някакви съобщения да се пускат ръчно от студента.
+2. Implement two GenServers which shall have functionality for passing messages to each other and to themselves. The messages shall be saved in the GenServer's state. 
 
 
 
@@ -190,51 +196,6 @@ https://elixir-lang.org/cheatsheets/gen-server.pdf
 
 
 
-
-
-
-
-```
-Example 12-1. A simple gen_server example
-defmodule DropServer do
-use GenServer
-defModule State do
-defstruct count: 0
-end
-# This is a convenience method for startup
-def start_link do
-GenServer.start_link(__MODULE__, [], [{:name, __MODULE__}])
-end
-# These are the callbacks that GenServer.Behaviour will use
-def init([]) do
-{:ok, %State{}}
-end
-def handle_call(request, _from, state) do
-distance = request
-reply = {:ok, fall_velocity(distance)}
-new_state = %State{count: state.count + 1}
-{:reply, reply, new_state}
-end
-def handle_cast(_msg, state) do
-IO.puts("So far, calculated #{state.count} velocities.")
-{:noreply, state}
-end
-def handle_info(_info, state) do
-{:noreply, state}
-end
-def terminate(_reason, _state) do
-{:ok}
-end
-def code_change(_old_version, state, _extra) do
-{:ok, state}
-end
-# internal function
-def fall_velocity(distance) do
-:math.sqrt(2 * 9.8 * distance)
-end
-end
-
-```
 
 
 
