@@ -165,8 +165,8 @@ https://elixir-lang.org/cheatsheets/gen-server.pdf
 
 # Exercises:
 
-1. Implement a GenServer which shall synchroniusly add in a state map a key value pair ex: "a" => 1 and asynchronicaly messages in a list which can be accessed through a key named "async". Implement a gracefull shutdown and a print.
+1. Implement a GenServer which shall synchroniusly add in a state map a key value pair ex: "a" => 1 and asynchronicaly messages in a list which can be accessed through a key named "async". Implement a gracefull shutdown and a print. (first part)
 
 
-2. Implement two GenServers which shall have functionality for passing messages to each other and to themselves. The messages shall be saved in the GenServer's state. 
+2. Implement two GenServers which shall have functionality for passing messages to each other and to themselves. The messages shall be saved in the GenServer's state. (second part)
 

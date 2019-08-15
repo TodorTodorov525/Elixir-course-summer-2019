@@ -33,10 +33,10 @@
     IO.puts("The argument is a list, its first agument is #{to_string(head)}")
   end
   
-2.
-[a, [b, _], _] = [1, [2, 3], 4]
 
-  
+2.
+  [a, [b, _], _] = [1, [2, 3], 4]
+
   
 3.
   def hw3(param) do
@@ -59,13 +59,34 @@
   end
   
 5.
-Enum.find_value([%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}, %{name: "Jane Doe", age: 1}], fn x -> if x.age == 1 do to_string(x.name) <> ": " <> to_string(x.age) <> " year old" end end)
+    def hw5(list) do
+        itemToString = fn(person) ->
+            %{name: name, age: age} = person
+            "#{name}: #{age} years old"
+        end
+
+        Enum.map_every(list, 1, fn person -> itemToString.(person) end)
+    end
 
 
 6.
-Enum.find_value([%{name: "Alice Addison", age: 14}, %{name: "Bob Benetton", age: 21}, %{name: "Eve Elliot", age: 18}, %{name: "Jane Doe", age: 1}], fn x -> if x.age == 1 do to_string(x.name) <> ": " <> to_string(x.age) <> " year old" end end)
+   def hw6(list) do
+        itemToString = fn(person) ->
+            %{name: name, age: age} = person
+            
+            checkYears = fn
+                1 -> "#{name}: #{age} year old"
+                _ -> "#{name}: #{age} years old"
+            end
+
+            checkYears.(age)
+        end
+
+        Enum.map_every(list, 1, fn person -> itemToString.(person) end)
+    end
+
 
 7.
-Enum.drop_while(["An example sentence", "Another sentence", "Third sentence"], fn x -> String.contains?(x,"a") end)
+  Enum.drop_while(["An example sentence", "Another sentence", "Third sentence"], fn x -> String.contains?(x,"a") end)
 
 

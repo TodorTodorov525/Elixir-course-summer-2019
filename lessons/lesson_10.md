@@ -8,7 +8,7 @@ Once we are able to split our problem into sub-tasks, and make it concurrent, we
 
 ### Process
 
-Elixir programms are made by many processes. The language's architecture provides the ability to create milions of processes on a single machine. They are not OS processes, they are much more lightweight, a single elixir process uses around 1-2KB memory. Their use is a common approach when building fast and scalable applications.
+Elixir programs are made by many processes. The language's architecture provides the ability to create milions of processes on a single machine. They are not OS processes, they are much more lightweight, a single elixir process uses around 1-2KB memory. Their use is a common approach when building fast and scalable applications.
 
 A process is made by the function `spawn`. If it is successful an unique process identifier(pid) is returned. Which pid can then be used for inter process communication and remote calls.
 
@@ -32,7 +32,7 @@ iex(1)> self()
 #PID<0.26.0>
 ```
 
-Processes in Elixir rely on messages for communication with one another. The function that implemends the sneding of a message is `send` and the code block used for handling different messages is `receive do` if a message is not handled, the execution of the code continues uninterupted.
+Processes in Elixir rely on messages for communication with one another. The function that implemends the sending of a message is `send` and the code block used for handling different messages is `receive do` if a message is not handled, the execution of the code continues uninterupted.
 
 Example:
 
@@ -55,7 +55,7 @@ Received dog
 "dog"
 ```
 
-Using the `spawn` function allows us to create a process in a way that we will not be able to know when the process is finished. Luckily Elixir provides a function for creating linked processes called `spawn_link` so that two linked processes will receive exit notifications form one another.
+Using the `spawn` function allows us to create a process in a way that we will not be able to know when the process is finished. Luckily Elixir provides a function for creating linked processes called `spawn_link` so that two linked processes will receive exit notifications from one another.
 
 Example:
 

@@ -1,3 +1,4 @@
+1.
   def calc({a, b, c}) do
     des = b * b - 4 * a * c
     x1 = (-b + :math.sqrt(des)) / 2 * a
@@ -63,13 +64,15 @@
 
 
 -----------------------------------------------------------------------------------------
-
-def zad2(list, separator) do
+2.
+  def zad2(list, separator) do
     for elem <- list do
       "#{elem}#{separator}"
     end
   end
 
+
+3.
   def zad3(list, int, value) when is_list(list) and is_integer(int) and is_integer(value) do
     if length(list) > int do
       Enum.at(list, int)
@@ -80,12 +83,14 @@ def zad2(list, separator) do
 
   def zad3(list, int, value), do: "Wrong argument types!"
 
+4.
   def zad4(list, int) when is_list(list) and is_integer(int) do
     Enum.take(list, int)
   end
 
   def zad4(list, int), do: "Wrong argument types!"
 
+5.
   def zad5(list) do
     for elem <- list, String.length(elem) >= 5 do
       String.upcase(elem)
@@ -125,7 +130,8 @@ def zad2(list, separator) do
   end
   
   
-    def zad6(tuple) do
+  6.
+  def zad6(tuple) do
     case tuple do
       tuple when tuple_size(tuple) > 4 -> "shouldnt you use a list"
       _ -> "tuple is ok"
