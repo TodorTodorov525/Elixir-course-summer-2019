@@ -60,10 +60,6 @@ belongs to - it is being put in the scheme that is the 'many' in a one-to-many r
 has many - it is being put in the scheme that is the 'one' in a one-to-many relationship
 has one - it is being used for one-to-one relationships
 many_to_many - for implementing a many-to-many relationship, it needs a junction table in the migrations 
-
-the foreign ke
-във миграциите ги пишем references
-
 ```
 
 The foreign key implementation is being done in the migration.
