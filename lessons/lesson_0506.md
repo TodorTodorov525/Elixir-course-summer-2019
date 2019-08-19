@@ -18,7 +18,7 @@ Each one of them has a different use case and will be looked up separately in de
 
 Decision making structures require that the programmer specifies one or more conditions to be evaluated or tested by the program, along with a statement or statements to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.
 
-Following is the general from of a typical decision making structure found in most of the programming language − Elixir provides `if/else` conditional constructs like many other programming languages. It also has a `cond` statement which calls the first true value it finds. `Case` is another control flow statement which uses pattern matching to control the flow of the program.
+Following is the general form of a typical decision making structure found in most of the programming language − Elixir provides `if/else` conditional constructs like many other programming languages. It also has a `cond` statement which calls the first true value it finds. `Case` is another control flow statement which uses pattern matching to control the flow of the program.
 
 Elixir, as a functional programming language, normally follows declarative programming paradigm instead of imperative. By defining lots of small independent functions and use some tools Elixir provides us, we will use less of control flow constructions comparing to other languages. Well, maybe comparing to imperative languages.
 
@@ -57,7 +57,7 @@ So this code block is executed
 Outside the if statement
 ```
 
-If the opeartion in an "if" condition is succesful, the code which is being conditioned wll be executed.
+If the opearation in an "if" condition is successful, the code which is being conditioned wll be executed.
 Example: 
 
 ```
@@ -87,7 +87,7 @@ end
 If the Boolean expression evaluates to **`true or success`**, then the block of code inside the `if` statement will be executed. If Boolean expression evaluates to **`false or nil`**, then the code after the `else` keyword of the given if statement will be executed.
 
 `If else` flow diagram:
-https://cdn1.imggmi.com/uploads/2019/7/17/3d289e6be5da5e82197113133c16e64e-full.jpg - bad example of an algorythmic structure, the "truthtful/rightful" flow must be the main path
+https://cdn1.imggmi.com/uploads/2019/7/17/3d289e6be5da5e82197113133c16e64e-full.jpg - bad example of an algorithmic structure, the "truthtful/rightful" flow must be the main path
 
 Example:
 ```
@@ -105,7 +105,7 @@ Variable a is false!
 Outside the if statement
 ```
 
-Another example, showing that succesfull execution of an aritmetic operation evaluates to a truthful value.
+Another example, showing that successful execution of an arithmetic operation evaluates to a truthful value.
 ```
 def fun2() do
   if(5 + 5) do
@@ -124,7 +124,7 @@ got in if
 
 ### Unless
 
-This control structure implements the oposite logic of `if`. **If the condition is not met, the conditioned code is executed**
+This control structure implements the opposite logic of `if`. **If the condition is not met, the conditioned code is executed**
 
 Example: 
 
@@ -198,7 +198,7 @@ iex(1)> TestRpoejct.fun3
 
 ### Cond
 
-Elixir doesnt provide us with an easy syntax for making **if else** conditional operations in its standart syntax. The way it is done is by using `cond` statement, which allows us to check multiple outcomes of a particular action and do different things depending on its result. The `cond` will execute where the first condition is met, a default condition `true` must be specified in order to handle all of the situations in which we have not matched any of the upper conditions.  
+Elixir doesn't provide us with an easy syntax for making **if else** conditional operations in its standard syntax. The way it is done is by using `cond` statement, which allows us to check multiple outcomes of a particular action and do different things depending on its result. The `cond` will execute where the first condition is met, a default condition `true` must be specified in order to handle all of the situations in which we have not matched any of the upper conditions.  
 
 Cond statements are used where we want to execute a code on the basis of several
 conditions. It works like an if....else construct in several other programming
@@ -371,7 +371,7 @@ iex> case "cherry pie" do
 
 ### With
 
-`With` is used to combine matching clauses. By default the comprehension handles functions which return results in the following tuples:
+`With` is used to combine matching clauses. By default, the comprehension handles functions which return results in the following tuples:
 ```
 {:ok, result} - for success
 {:error, result} -> for unsuccess

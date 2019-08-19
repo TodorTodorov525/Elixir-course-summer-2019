@@ -4,7 +4,7 @@
 
 https://hexdocs.pm/elixir/GenServer.html
 
-GenServer is the Elixir's abstraction of an client - server implementation. The GenServer itself is a single process(in terms of OS processes), but it can be constructed by many asynchronic processes which will be working concurently. Racing each other to commmunicate with the main(server) process.
+GenServer is the Elixir's abstraction of an client - server implementation. The GenServer itself is a single process(in terms of OS processes), but it can be constructed by many asynchronic processes which will be working concurrently. Racing each other to communicate with the main(server) process.
 The server side has a build in memory which can hold any values, it is called state. State is an important part of the GenServer because it provides information passing through processes from one or different GenServer. It is analogical to the Agent's state.
 
 
@@ -35,21 +35,21 @@ def init(queue) do
 end
 ```
 
-Then we can implement functionality which can update the GenServer's state. In order for it to be the only one which will be executed by the user at a single moment of time we use the `GenServer.call` method specifing the atom `:cal` as a marker for expressing what are we 'calling'.
+Then we can implement functionality which can update the GenServer's state. In order for it to be the only one which will be executed by the user at a single moment of time we use the `GenServer.call` method specifying the atom `:cal` as a marker for expressing what are we 'calling'.
 ```
 def cal() do
     GenServer.call(__MODULE__, :cal)
 end
 ```
 
-And the server callback which shall return a reply to the server we specify a hadnle to an exact marker, and then we send a reply, whose second parameter is the value/message that will be printed as a result of that whole syncronicous call in the terminal. And as a third argument the new value of the state(it can be the old one if we havent made any changes to the value).
+And the server callback which shall return a reply to the server we specify a handle to an exact marker, and then we send a reply, whose second parameter is the value/message that will be printed as a result of that whole synchronous call in the terminal. And as a third argument the new value of the state(it can be the old one if we haven't made any changes to the value).
 ```
 def handle_call(:cal, from, state) do
   {:reply, :syn, state ++ [1]}
 end
 ```
 
-We can also implement a functionality which will make an asynchronicous call to the server, in order to do that we can use `GenServer.cast` also specifying an atom as a marker is needed. In the example the marker is `cas`. It won't block the IO, it will be executed in background and it is also possible to call multiple to run concurently.
+We can also implement a functionality which will make an asynchronous call to the server, in order to do that we can use `GenServer.cast` also specifying an atom as a marker is needed. In the example the marker is `cas`. It won't block the IO, it will be executed in background and it is also possible to call multiple to run concurrently.
 ```
 def cas() do
   GenServer.cast(__MODULE__, :cas)
@@ -165,7 +165,7 @@ https://elixir-lang.org/cheatsheets/gen-server.pdf
 
 # Exercises:
 
-1. Implement a GenServer which shall synchroniusly add in a state map a key value pair ex: "a" => 1 and asynchronicaly messages in a list which can be accessed through a key named "async". Implement a gracefull shutdown and a print. (first part)
+1. Implement a GenServer which shall synchronously add in a state map a key value pair ex: "a" => 1 and asynchronicaly messages in a list which can be accessed through a key named "async". Implement a graceful shutdown and a print. (first part)
 
 
 2. Implement two GenServers which shall have functionality for passing messages to each other and to themselves. The messages shall be saved in the GenServer's state. (second part)

@@ -8,7 +8,7 @@ Once we are able to split our problem into sub-tasks, and make it concurrent, we
 
 ### Process
 
-Elixir programs are made by many processes. The language's architecture provides the ability to create milions of processes on a single machine. They are not OS processes, they are much more lightweight, a single elixir process uses around 1-2KB memory. Their use is a common approach when building fast and scalable applications.
+Elixir programs are made by many processes. The language's architecture provides the ability to create millions of processes on a single machine. They are not OS processes, they are much more lightweight, a single elixir process uses around 1-2KB memory. Their use is a common approach when building fast and scalable applications.
 
 A process is made by the function `spawn`. If it is successful an unique process identifier(pid) is returned. Which pid can then be used for inter process communication and remote calls.
 
@@ -32,14 +32,14 @@ iex(1)> self()
 #PID<0.26.0>
 ```
 
-Processes in Elixir rely on messages for communication with one another. The function that implemends the sending of a message is `send` and the code block used for handling different messages is `receive do` if a message is not handled, the execution of the code continues uninterupted.
+Processes in Elixir rely on messages for communication with one another. The function that implements the sending of a message is `send` and the code block used for handling different messages is `receive do` if a message is not handled, the execution of the code continues uninterrupted.
 
 Example:
 
 ```
 def report() do
   receive do
-    "cat" -> IO.puts("watch your languange")
+    "cat" -> IO.puts("mind your language")
     msg -> IO.puts("Received #{msg}")
   end
   report()
@@ -48,7 +48,7 @@ end
 iex(10)> pid = spawn(Chain, :report, [])
 #PID<0.211.0>
 iex(11)> send(pid, "cat")
-watch your languange
+mind your language
 "cat"
 iex(12)> send(pid, "dog")
 Received dog
@@ -85,7 +85,7 @@ Example:
 ```
 def report() do
   receive do
-    "cat" -> IO.puts("watch your languange")
+    "cat" -> IO.puts("mind your language")
     msg -> IO.puts("Received #{msg}")
   end
   report()  #keeps the process alive which means that it will listen all the time for a new message
@@ -119,7 +119,7 @@ iex> Agent.get(agent, &(&1))
 [1, 2, 3, 4, 5]
 ```
 
-To add it in you Elixir module you must add the command `use Agent` and to specify wheather the agent should be restarted if it is beign closed and a exact time for it to live before beign shut down.
+To add it in your Elixir module you must add the command `use Agent` and to specify whether the agent should be restarted if it is being closed and a exact time for it to live before being shut down.
 
 Example:
 
@@ -156,7 +156,7 @@ Example:
 ```
 def add(a, b) do
   Process.sleep(40000)
-  IO.puts "40000 miliseconds elapsed"
+  IO.puts "40000 milliseconds elapsed"
   a+b
 end
 iex(17)> x = Task.async(Chain, :add, [1,2])
@@ -166,7 +166,7 @@ iex(17)> x = Task.async(Chain, :add, [1,2])
   ref: #Reference<0.1499057113.2386296833.72087>
 }
 iex(18)> Task.await(x, 50000)
-40000 miliseconds elapsed
+40000 milliseconds elapsed
 3
 ```
 
@@ -184,7 +184,7 @@ iex(18)> Task.await(x, 50000)
 2. Create a module or a new mix project which will have to make requests to https://docs.openaq.org
 ```
 There must be a function to which a country name should be passed as an argument. 
-One the screen there should be all of the current measurements in that country, 
+On the screen there should be all of the current measurements in that country, 
 and the city with the highest and lowest measurement value. 
 Processes, tasks or agents shall be used. The code structure and the way of implementation are fluid.
 For ease use these dependencies:
@@ -205,20 +205,20 @@ Additional literature: https://www.poeticoding.com/spawning-processes-in-elixir-
 message" and returns itself with the same argument
 4. The function start/0 should spawn the function loop in a separate process with an empty list as
 the argument, and will return the pid of the new process
-5. Let loop/1 recive a message in the form of ":show" and it will print out the contents of the
+5. Let loop/1 receive a message in the form of ":show" and it will print out the contents of the
 argument
 6. Make it so that loop/1 can receive a message in the form of {:push, item}, and in that case will
-call itself with the "item" inserted at the beggining of its argument
+call itself with the "item" inserted at the beginning of its argument
 E.g if loop/1 has an empty list as the argument, and receives the message {:push, "test"} it should
 call loop(["test"])
-If it then recieves a message in the form of {:push, "alabala"} it should call loop(["alabala", "test"])
+If it then receives a message in the form of {:push, "alabala"} it should call loop(["alabala", "test"])
 Then if it receives {:something} it should call loop(["alabala", "test"])
 7. Create a function push/2 that receives a pid and an item and sends to the pid a message in the
 form of {:push, item}
 8. Let loop be able to receive message in the form of {:pop, pid}. In that case it should send to the
 pid the first item in the current list. If no items are in the list, it should send {:error, "No items in
 the list"}. If there are items, after returning the first one, it should call itself with the reduced list.
-9. Create a function pop/1, that recieves a pid, and sends it {:pop, <its-own-pid>}. Then it waits to
-receive a message, and if there are no errors, it returns the recieved item.
+9. Create a function pop/1, that receives a pid, and sends it {:pop, <its-own-pid>}. Then it waits to
+receive a message, and if there are no errors, it returns the received item.
 10. Create a separate function for each message
 ```

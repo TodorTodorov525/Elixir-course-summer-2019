@@ -24,7 +24,7 @@ iex> nil        # nil
 
 
 #### Integer
-Integers can be represented in decimal, binary, octal and hexadecimal numeric systems, as well as with a positive and negative sign. By default it is assumed that the number is positive.
+Integers can be represented in decimal, binary, octal and hexadecimal numeric systems, as well as with a positive and negative sign. By default, it is assumed that the number is positive.
 
 ###### Example:
 ```
@@ -40,7 +40,7 @@ iex(5)> +0x77
 119
 iex(6)> -0x77 
 -119
-iex(5)> 0b110111 + 0o67 + 0x37 #Aritmetic operations are feasible between numbers of different numeric systems.
+iex(5)> 0b110111 + 0o67 + 0x37 #Arithmetic operations are feasible between numbers of different numeric systems.
 165
 ```
 
@@ -70,7 +70,7 @@ The boolean values are `true` and `false`.
 
 
 #### Atom
-Atoms are specific values in Elixir. The value of an atom is its name. Often they are used to express the state of an operation, by using values such as :ok and :error.
+Atoms are specific values in Elixir. The value of an atom is its name. Often they are used to expressing the state of an operation, by using values such as :ok and :error.
 
 
 ###### Example:
@@ -105,7 +105,7 @@ iex(21)> ?б   #the unicode's code point value
 1073                                                                                
 iex(22)> ?Б  #the unicode's code point value           
 1041   
-iex(134)> ?L + 32 #aritmeric operations are possible between unicode and integer
+iex(134)> ?L + 32 #arithmetic operations are possible between unicode and integer
 108
 iex(137)> ?L + 3.5e1
 111.0
@@ -113,7 +113,7 @@ iex(138)> ?L + 3.5e5
 350076.0
 ```
 
-Binaries are in are a specific data type in Elixir. And are a part of it's enrichment.  Each binary value(that is a part of an Elixir binary) is represented by 8 bits. Each change into the binary's structure will lead to transforming that binary into a bitstring.
+Binaries are in are a specific data type in Elixir. And are a part of of its enrichment. Each binary value(that is a part of an Elixir binary) is represented by 8 bits. Each change into the binary's structure will lead to transforming that binary into a bitstring.
 https://cdn1.imggmi.com/uploads/2019/7/11/478eadf9b9c1f9e4c4ea9b4cd5e7dc97-full.png
 https://cdn1.imggmi.com/uploads/2019/7/11/623399b7775e48cfcc87ce8760bcab1b-full.png
 
@@ -130,7 +130,7 @@ iex(26)> <<1073 :: utf8>> #Binary transformed into string.
 ```
 
 ##### nil
-This is the data type equivalent to NULL in other programing languages
+This is the data type equivalent to NULL in other programming languages
 
 ```
 iex(111)> nil
@@ -138,9 +138,9 @@ nil
 ```
 
 ### Basic operations
-Elixir supports all common aritmetic operations.
+Elixir supports all common arithmetic operations.
 
-###### Aritmetic operations
+###### Arithmetic operations
 
 ###### Example:
 
@@ -157,7 +157,7 @@ iex(31)> 22 / 3
 7.333333333333333
 ```
 
-It is important to say that using the common divide operator, the result will always be float. If the result must be an integer value the prebuilt function `div` is needed. The remainder can be found by using another prebuilt function `rem`.
+It is important to say that using the common divide operator, the result will always be a number with a floating point. If the result must be an integer value the prebuilt function `div` is needed. The remainder can be found by using another prebuilt function `rem`.
 
 ###### Example:
 
@@ -178,7 +178,7 @@ iex> &&   #and
 iex> !    #not
 ```
 
-these bellow require boolen value on their left side
+these below require boolean value on their left side
 ```
 iex> and   
 iex> or   
@@ -186,7 +186,7 @@ iex> not
 ```
 
 
-using an aditional module `Bitwise` calculations on bits are possible
+using an additional module `Bitwise` calculations on bits are possible
 ```
 &&& - AND
 <<< - left bitshift
@@ -333,11 +333,11 @@ iex(58)> add.(8,9)
 17
 iex(59)> double = fn a -> add.(a,a) end #function in function
 -#Function<6.99386804/1 in :erl_eval.expr/5>
-iex(60)> double.(4)  #access an anonymnous function
+iex(60)> double.(4)  #access an anonymous function
 8
 ```
 
-A function can have myltiple bodies, which are separated from the others, by the arguments that are passed to the function. The passed atguments must be the same number.
+A function can have multiple bodies, which are separated from the others, by the arguments that are passed to the function. The passed arguments must be the same number.
 
 ###### Example:
 
@@ -431,7 +431,7 @@ Use documentation String - https://hexdocs.pm/elixir/String.html
 
 5. The string "wonderful" is given. That is it's length, which letter is his third one, Transform it into "Wonderful".
 
-6. The string "I hate homework" is given. Replace the space with "." (I.hate.homework) . Wrtie it backwards ("krowemoh evol I").
+6. The string "I hate homework" is given. Replace the space with "." (I.hate.homework) . Write it backwards ("krowemoh evol I").
 
 
 

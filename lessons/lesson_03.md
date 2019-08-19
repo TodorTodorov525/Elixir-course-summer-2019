@@ -4,7 +4,7 @@
 
 ### List
 
-The list is a simple collection of values. It can consist repeating values. They are represented internaly as linked lists and they have the following characteristics:
+The list is a simple collection of values. It can consist repeating values. They are represented internaly as linked lists, and they have the following characteristics:
 
 - They support adding/removing elements (adding from the front is faster than from the back)
 - Memory usage scales with the list size. The more elements the list has, the more memory it requires
@@ -12,7 +12,7 @@ The list is a simple collection of values. It can consist repeating values. They
 
 Linked list characteristics: https://cdn1.imggmi.com/uploads/2019/7/15/c505f22f0abac0ef89e3babe5ddbd6cd-full.png
 
-In elixir retrieving the last element is O(n). Because the interpretaor doesn't know the reference to the last element.
+In elixir retrieving the last element is O(n). Because the interpreter doesn't know the reference to the last element.
 
 Visual expression of a linked list: https://cdn1.imggmi.com/uploads/2019/7/15/f904749140b963123f2e061871bebedb-full.png
 
@@ -21,7 +21,7 @@ In order to reach the 3rd element, the system needs to know where the list begin
 To add a new element, a new memory slot is reserved anywhere where free memory is available, and then a reference to it is added to the previous last element.
 
 With a list, adding/removing elements is a relatively cheap operation that doesn’t need to mess with existing memory, which is why they’re more suited for dynamic collections.
-Each term Term in the list is called an element. The number of elements is said to be the length of the list.
+Each term in the list is called an element. The number of elements is said to be the length of the list.
 
 Formally, a list is either the empty list `[]` or consists of a head (first element) and a tail (remainder of the list). The tail is also a list. The latter can be expressed as `[H|T]`.
 
@@ -47,9 +47,9 @@ iex(20)> [1,2,3] === [1|[2|[3|[]]]]
 true
 ```
 
-List are linked list, and optimized for TCO(tail call optimisation). That is why you will often see the [head | tail] representation. They are not so good for asking the 5th element for example.
+List are linked list, and optimized for TCO(tail call optimization). That is why you will often see the [head | tail] representation. They are not so good for asking the 5th element for example.
 
-List concatenation is done by the `++` operator and it is a operation done between lists. It can be done from the front or form the back of the list. Trying to concatenate a varioable with a list, will lead to breaking the list's structure and the need to make further informations to fix the list's structure so that it can be usable with all of the integrated functions and most common operations.
+List concatenation is done by the `++` operator and it is a operation done between lists. It can be done from the front or form the back of the list. Trying to concatenate a variable with a list, will lead to breaking the list's structure and the need to make further informations to fix the list's structure so that it can be usable with all of the integrated functions and most common operations.
 
 Example:
 
@@ -71,7 +71,7 @@ iex(30)> ["new first"] ++ list ++ ["new last"]
 ["new first", 3.14, :pie, "Apple", "new last"]
 ```
 
-List substraction is done by `--` operator, and analogically to concatenation, requires lists as operands. The values from the right list are searched through  the list on the left and the first match of a particular value is removed. 
+List subtraction is done by `--` operator, and analogically to concatenation, requires lists as operands. The values from the right list are searched through  the list on the left and the first match of a particular value is removed. 
 
 Example:
 
@@ -148,7 +148,7 @@ iex(25)> [b, b] = [1, 2]
 ** (MatchError) no match of right hand side value: [1, 2]
 ```
 
-A list's length is considered the number of it's elements. The count starts from one.
+A list's length is considered the number of its elements. The count starts from one.
 
 ```
 iex(43)> list
@@ -159,7 +159,7 @@ iex(44)> length(list)
 
 ### Tuple
 
-Tuples are a collection in which the values are stored successively in the memory. Retrieving data and about the values or the tuple itself is rather cheap, but modifications are expensive, because when an element is added or removed or a value modified, Elixir creates a copy of the whole tuple with values updated after the modification. Tuples are defined with curly brackets. Often tuples are used as a mechanism for returning information about the succes of a function.
+Tuples are a collection in which the values are stored successively in the memory. Retrieving data and about the values or the tuple itself is rather cheap, but modifications are expensive, because when an element is added or removed or a value modified, Elixir creates a copy of the whole tuple with values updated after the modification. Tuples are defined with curly brackets. Often tuples are used as a mechanism for returning information about the success of a function.
 
 Example:
 
@@ -211,7 +211,7 @@ iex(58)> c
 
 ### Map
 
-The map in Elixir is a collection storing key-value pairs. The keys can be of any type, but the Elixir's coding standart caontaing the language's best practisises requires them to be atoms or strings. Although this is a full valid map. 
+The map in Elixir is a collection storing key-value pairs. The keys can be of any type, but the Elixir's coding standard containing the language's best practisises requires them to be atoms or strings. Although this is a full valid map. 
 
 ``` 
 iex(60)> %{%{<<1>> => 1} => "a"} # the inner key is a binary, the outer is a map
@@ -244,7 +244,7 @@ iex> %{foo: "bar", foo: "hello world"}
 %{foo: "hello world"}
 ```
 
-There is a an easy way to update a map.
+There is an easy way to update a map.
 
 Example:
 
@@ -284,7 +284,7 @@ Maps are not ordered.of
 
 ### Keyword list 
 
-Keyword lists in Elixir are actually list of tuples. Which first element is an atom. 
+Keyword lists in Elixir are actually list of tuples. Which's first element is an atom. 
 
 Example:
 
@@ -295,7 +295,7 @@ iex> [{:foo, "bar"}, {:hello, "world"}]
 [foo: "bar", hello: "world"]
 ```
 
-They keyword has the characteristics of a list. And more:
+The keyword has the characteristics of a list. And more:
 
 - The keys are atoms.
 - The keys are ordered.

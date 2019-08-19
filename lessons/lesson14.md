@@ -2,14 +2,18 @@
 
 # Ecto
 
+https://hexdocs.pm/ecto/Ecto.html
 
-няколко са ключоветие компоненти в екто
+Ecto is the most used middleware for DB operations. It is somewhat close to the ORM in the object-oriented languages. Is consist of four key components.
 
 ```
-Repo - repositories that are wrappers around a datastor, using it gives us the ability to insert,create, delete and query.
-Schema - schemas map any data source into an elixir
-Changeset - Changesets provide a way for developers to filter and cast external parameters, as well as a mechanism to track and validate changes before they are applied to data.
-Query - Provides a DSL-like SQL query for retrieving information from a repository. Queries in Ecto are secure, avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once.
+Repo - repositories that are wrappers around a datastore, using it gives us the ability to insert,create, delete and query
+
+Schema - schemas map any data source into an elixir struct
+
+Changeset - provides a way for developers to filter and cast external parameters, as well as a mechanism to track and validate changes before they are applied to data
+
+Query - provides a SQL query for retrieving information from a repository. Queries in Ecto are secure, avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once
 ```
 
 # Schema 
@@ -19,47 +23,57 @@ Query - Provides a DSL-like SQL query for retrieving information from a reposito
 defmodule User do
   use Ecto.Schema
 
-  schema "users" do
+ schema "users" do
     field :first_name, :string
     field :last_name, :string
     field :age, :integer
-     many_to_many(:energy_meters, EnergyMeter,
-      join_through: "user_energy_meters",
-      on_replace: :delete
-    )
-     ## defyning many to many rfelation between phonen umber and userss
-    many_to_many(:numbers, PhoneNumber, join_through: "user_numbers", on_replace: :delete)
-    ### напиши един belongs_to
+    has_many :phone_numbers, PhoneNumber
+    many_to_many(:energy_meters, EnergyMeter,
+    join_through: "user_energy_meters",
+    on_replace: :delete
+  )
   end
 end
 ```
 
-как се изразява в миграцишятя:
+In order to reate a table in the DB, a migration must be created. Which can be done with the command `mix ecto.gen.migration create_users`
+
+Example:
 ```
-defmodule SpmWeb.Repo.Migrations.CreateUserMeters do
+defmodule EctoTest.Repo.Migrations.CreateUsers do
   use Ecto.Migration
 
   def change do
-    create table(:user_energy_meters, primary_key: false) do
-      add(:energy_meter_id, references(:energy_meters, on_delete: :delete_all), primary_key: true)
-      add(:user_id, references(:users, on_delete: :delete_all), primary_key: true)
+    create table(:users) do
+      add(:first_name, :string)
+      add(:last_name, :string)
+      add(:age, :integer)
     end
   end
 end
 ```
 
-
-
-
-има няколок вида асоциация в екто
+Ecto implements a couple of associations:
 
 ```
-belongs to - казва се какво ще му е "многото"
-has many - казва се кое ще му емногото
-has one - най-много един може и да е нула
-many_to_many - за връзка много към много, после в миграциите се прави junction table
+belongs to - it is being put in the scheme that is the 'many' in a one-to-many relationship
+has many - it is being put in the scheme that is the 'one' in a one-to-many relationship
+has one - it is being used for one-to-one relationships
+many_to_many - for implementing a many-to-many relationship, it needs a junction table in the migrations 
+
+the foreign ke
 във миграциите ги пишем references
 
+```
+
+The foreign key implementation is being done in the migration.
+
+Example:
+```
+  create table(:phone_number) do
+    add(:number, :string)
+    add(:user_id, references(:users))
+  end
 ```
 
 # Changeset
@@ -69,25 +83,36 @@ A changeset is a type of elixir struct that contains information pertaining to h
 By convention, we add methods for creating changesets to the schema using Ecto.Changeset.cast\3 to cast items from a map.
 
 ```
-defmodule Myapp.Schema.User do
+defmodule EctoTest.User do
   use Ecto.Schema
-  import Ecto
   import Ecto.Changeset
-  import Ecto.Query
+  alias EctoTest.{PhoneNumber, EnergyMeter, User, Repo}
 
-  # ...
+  schema "users" do
+    field(:first_name, :string)
+    field(:last_name, :string)
+    field(:age, :integer)
+    has_many(:phone_numbers, PhoneNumber)
 
-  def changeset(struct, params \\ %{})) do
-    struct
-      |> cast(params, [:email, :password_hash])
+    many_to_many(:energy_meters, EnergyMeter,
+      join_through: "user_energy_meters",
+      on_replace: :delete
+    )
   end
 
+  def changeset(user, attrs \\ %{}) do
+    user
+    |> cast(attrs, [
+      :first_name,
+      :last_name,
+      :age
+    ])
+  end
 end
 ```
 
 
 # Query
-
 
 Queries are used to retrieve and manipulate data from a repository (see Ecto.Repo). Ecto queries come in two flavors: keyword-based and macro-based. Most examples will use the keyword-based syntax, the macro one will be explored in later sections.
 
@@ -103,14 +128,3 @@ query = from u in "users",
 # Send the query to the repository
 Repo.all(query)
 ```
-
-
-малко теорзя дза екто
-примери
-задача имплементираща круд операциите
-
-накрая сажи за курсовата
-
-
-задачата да се пусне постгрес сървър да се направи една таблица, втори модул в който да се имплементират круд и листване и пример за всяка една асоцияция
-начертай и схема на базата

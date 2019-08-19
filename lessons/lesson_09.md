@@ -32,7 +32,7 @@ def test_require(a) when Integer.is_odd(a) == true do
 end
 ```
 #### spec
-The paramter type which the function expects and the return type.
+The parameter type which the function expects and the return type.
 ```
 @spec test_require(integer) :: integer
 ```
@@ -43,7 +43,7 @@ There are basically two main benefits to declaring specifications and using cust
 
 Firstly, it acts as documentation. It’s much easier to read and understand code if you know what the types are. Even the best named arguments and functions can be ambiguous when you are trying to get to grips with new code. Function specifications and custom types make it explicitly clear as to what is going on, and tools like ExDoc can take advantage of your specifications to show this kind of detail in the documentation that is produced from your code.
 
-Secondly, you can use Dialyzer, which is an Erlang static analysis tool to find discrepancies or possible bugs in your code. In Elixir we can use dialyxir to make it easier to work with Dialyzer. Whilst using Dialyzer does not guarantee that you will find all bugs and errors in your code, you are sure to get some benefit from writing specs and using a static analysis tool.
+Secondly, you can use Dialyzer, which is an Erlang static analysis tool to find discrepancies or possible bugs in your code. In Elixir, we can use dialyxir to make it easier to work with Dialyzer. Whilst using Dialyzer does not guarantee that you will find all bugs and errors in your code, you are sure to get some benefit from writing specs and using a static analysis tool.
 
 #### typedoc
 

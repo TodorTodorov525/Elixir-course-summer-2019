@@ -2,7 +2,7 @@
 
 ## Recursion
 
-Due to the language's immutability, Elixir doesn't provide us with the standart common implementation of a for loop. As a result one of the ways to implement a for loop is by using recursion.
+Due to the language's immutability, Elixir doesn't provide us with the standard common implementation of a for loop. As a result one of the ways to implement a for loop is by using recursion.
 
 ```
 defmodule Loop do
@@ -70,7 +70,7 @@ def hello_world(count) do
 end
 ```
 
-Example: This is how a summing functiuon can be implementeed recursively. The numbers are passed as a list.
+Example: This is how a summing function can be implemented recursively. The numbers are passed as a list.
 ```
 def sum_numbers2([head | tail]) do
   ## the function is called again, but this time the tail is passed as an argument, ## on the right side of the plus sign is the old value on the left is the new one 

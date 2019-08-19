@@ -11,7 +11,7 @@ Require
 Use
 ```
 
-'Alias' is used when we want to shorten a module name. To make a module available 'require' is needed. To make all functions of a particular module available 'import' is used and if it some external functionaltiy needed 'use' is being used.
+'Alias' is used when we want to shorten a module name. To make a module available 'require' is needed. To make all functions of a particular module available 'import' is used and if it some external functionality needed 'use' is being used.
 
 Combination between inheritances is also available:
 
