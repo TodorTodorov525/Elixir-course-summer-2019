@@ -130,10 +130,25 @@
   end
   
   
-  6.
+6.
   def zad6(tuple) do
     case tuple do
       tuple when tuple_size(tuple) > 4 -> "shouldnt you use a list"
       _ -> "tuple is ok"
     end
+  end
+
+7.
+  def task7(list) when is_list(list) do
+    Enum.reduce(list, 1 , fn x , acc -> x * acc end)
+  end
+
+8.
+  def task8(list) when is_list(list) do
+      for number <- list, rem(number,2) == 0, do: number
+  end
+
+9.
+  def task9(list) when is_list(list) do
+    Enum.reduce(list,fn x, acc -> acc <> " " <> x end)
   end

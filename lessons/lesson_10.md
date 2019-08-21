@@ -196,29 +196,3 @@ https://hex.pm/packages/jason - for jason encoding and decoding
 
 Additional literature: https://www.poeticoding.com/spawning-processes-in-elixir-a-gentle-introduction-to-concurrency/
 ```
-
-3.
-```
-1. Create a new module - Stack
-2. Let stack has a function - start/0
-3. Let Stack has another function - loop/1, that can receive any message, will print "Unsupported
-message" and returns itself with the same argument
-4. The function start/0 should spawn the function loop in a separate process with an empty list as
-the argument, and will return the pid of the new process
-5. Let loop/1 receive a message in the form of ":show" and it will print out the contents of the
-argument
-6. Make it so that loop/1 can receive a message in the form of {:push, item}, and in that case will
-call itself with the "item" inserted at the beginning of its argument
-E.g if loop/1 has an empty list as the argument, and receives the message {:push, "test"} it should
-call loop(["test"])
-If it then receives a message in the form of {:push, "alabala"} it should call loop(["alabala", "test"])
-Then if it receives {:something} it should call loop(["alabala", "test"])
-7. Create a function push/2 that receives a pid and an item and sends to the pid a message in the
-form of {:push, item}
-8. Let loop be able to receive message in the form of {:pop, pid}. In that case it should send to the
-pid the first item in the current list. If no items are in the list, it should send {:error, "No items in
-the list"}. If there are items, after returning the first one, it should call itself with the reduced list.
-9. Create a function pop/1, that receives a pid, and sends it {:pop, <its-own-pid>}. Then it waits to
-receive a message, and if there are no errors, it returns the received item.
-10. Create a separate function for each message
-```
