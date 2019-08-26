@@ -1,6 +1,6 @@
 # Elixir course lesson №14
 
-# Ecto
+## Ecto
 
 https://hexdocs.pm/ecto/Ecto.html
 
@@ -16,7 +16,7 @@ Changeset - provides a way for developers to filter and cast external parameters
 Query - provides a SQL query for retrieving information from a repository. Queries in Ecto are secure, avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once
 ```
 
-# Schema 
+## Schema 
 
 Example:
 ```
@@ -72,7 +72,7 @@ Example:
   end
 ```
 
-# Changeset
+## Changeset
 
 A changeset is a type of elixir struct that contains information pertaining to how a database should be modified.
 
