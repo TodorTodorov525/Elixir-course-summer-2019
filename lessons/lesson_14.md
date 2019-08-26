@@ -16,7 +16,8 @@ Changeset - provides a way for developers to filter and cast external parameters
             to track and validate changes before they are applied to data
 
 Query - provides a SQL query for retrieving information from a repository. Queries in Ecto are secure,
-        avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once
+        avoiding common problems like SQL Injection, while still being composable, allowing developers
+        to build queries piece by piece instead of all at once
 ```
 
 ## Schema 
