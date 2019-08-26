@@ -7,13 +7,16 @@ https://hexdocs.pm/ecto/Ecto.html
 Ecto is the most used middleware for DB operations. It is somewhat close to the ORM in the object-oriented languages. Is consist of four key components.
 
 ```
-Repo - repositories that are wrappers around a datastore, using it gives us the ability to insert,create, delete and query
+Repo - repositories that are wrappers around a datastore, using it gives us the ability to insert, create,
+       delete and query
 
 Schema - schemas map any data source into an elixir struct
 
-Changeset - provides a way for developers to filter and cast external parameters, as well as a mechanism to track and validate changes before they are applied to data
+Changeset - provides a way for developers to filter and cast external parameters, as well as a mechanism
+            to track and validate changes before they are applied to data
 
-Query - provides a SQL query for retrieving information from a repository. Queries in Ecto are secure, avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once
+Query - provides a SQL query for retrieving information from a repository. Queries in Ecto are secure,
+        avoiding common problems like SQL Injection, while still being composable, allowing developers to build queries piece by piece instead of all at once
 ```
 
 ## Schema 
