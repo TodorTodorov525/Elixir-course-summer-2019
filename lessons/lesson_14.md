@@ -18,7 +18,7 @@ Query - provides a SQL query for retrieving information from a repository. Queri
 
 # Schema 
 
-пример за схема:
+Example:
 ```
 defmodule User do
   use Ecto.Schema
