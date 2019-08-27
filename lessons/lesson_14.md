@@ -20,7 +20,7 @@ Query - provides a SQL query for retrieving information from a repository. Queri
         to build queries piece by piece instead of all at once
 ```
 
-## Schema 
+### Schema 
 
 Example:
 ```
@@ -76,7 +76,7 @@ Example:
   end
 ```
 
-## Changeset
+### Changeset
 
 A changeset is a type of elixir struct that contains information pertaining to how a database should be modified.
 
@@ -112,7 +112,7 @@ end
 ```
 
 
-# Query
+### Query
 
 Queries are used to retrieve and manipulate data from a repository (see Ecto.Repo). Ecto queries come in two flavors: keyword-based and macro-based. Most examples will use the keyword-based syntax, the macro one will be explored in later sections.
 
