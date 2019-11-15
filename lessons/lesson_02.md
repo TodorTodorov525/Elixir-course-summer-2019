@@ -114,9 +114,9 @@ iex(138)> ?L + 3.5e5
 ```
 
 Binaries are in are a specific data type in Elixir. And are a part of of its enrichment. Each binary value(that is a part of an Elixir binary) is represented by 8 bits. Each change into the binary's structure will lead to transforming that binary into a bitstring.
-https://cdn1.imggmi.com/uploads/2019/7/11/478eadf9b9c1f9e4c4ea9b4cd5e7dc97-full.png
-https://cdn1.imggmi.com/uploads/2019/7/11/623399b7775e48cfcc87ce8760bcab1b-full.png
 
+![Difference between binary and bitstring](master/images/binary_bitstring.png)
+![Represent integer as bitstring](master/images/represent_integer_as_bitstring.png)
 
 ```
 iex(23)> <<8::4>>
