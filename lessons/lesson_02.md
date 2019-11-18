@@ -254,6 +254,14 @@ iex(32)> "w" > 2.0
 true
 ```
 
+The reason we can compare different data types is pragmatism. Sorting algorithms don’t need to worry about different data types in order to sort. 
+The overall sorting order is defined below:
+
+```
+number < atom < reference < function < port < pid < tuple < map < list < bitstring
+```
+
+
 ```
 iex(7)> 2.0 > 2
 false

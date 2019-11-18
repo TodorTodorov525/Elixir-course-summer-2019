@@ -10,11 +10,12 @@ The list is a simple collection of values. It can consist repeating values. They
 - Memory usage scales with the list size. The more elements the list has, the more memory it requires
 - Fetching elements may sometimes be slow (because the lists are distributed arbitrarily in no particular order, with each element holding a reference to the next one)
 
-Linked list characteristics: https://cdn1.imggmi.com/uploads/2019/7/15/c505f22f0abac0ef89e3babe5ddbd6cd-full.png
+
+Linked list characteristics: ![Linked list characteristics](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/linked_list.png)
 
 In elixir retrieving the last element is O(n). Because the interpreter doesn't know the reference to the last element.
 
-Visual expression of a linked list: https://cdn1.imggmi.com/uploads/2019/7/15/f904749140b963123f2e061871bebedb-full.png
+Visual expression of a linked list:  ![List characteristics](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/list.png)
 
 In order to reach the 3rd element, the system needs to know where the list begins (which is pretty much all it knows), and then traverse from there. This means that to get to the 100th element, all 99 elements before it have to be traversed.
 
@@ -186,7 +187,7 @@ This leads to the following conclusions:
 - They are meant to hold a fixed number of elements
 - As a result of the previous point, memory usage is also static, and allocated upfront.
 - The data structure does not support addition/removal of elements. Any change requires recreating an entirely new version of the structure.
-- In memory, this looks a lot different from lists -  https://cdn1.imggmi.com/uploads/2019/7/15/ed8d8681fd525a11bdae1878c566582b-full.png
+- In memory, this looks a lot different from lists -  ![Tuple representation](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/tuple.png)
 - A reference to where the tuple’s memory begins
 - The index of the element you’re accessing
 - Coming from other programming languages, you might recognize this as being very similar to accessing a static array. And you’d be right. Tuples are not much more than abstractions to statically-sized arrays. The difference comes in the semantic meaning given to both.
@@ -318,7 +319,7 @@ iex(19)> Enum.at(list1, 0)
 ```
 
 This is how the keyword is represented, the first value points to the second key and so on.
-https://cdn1.imggmi.com/uploads/2019/7/15/50ce00f4371e2b133d895f6ac5e8a12d-full.png
+![Keyword list representation](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/keyword.png)
 
 Keyword appending is analogical to list appending.
 
