@@ -2,8 +2,7 @@
 
 ## Operators/Control structures (if, unless cond, case), 'with' comprehension | Simulation of a 'for' loop using interpolation and comprehension | guards
 
-Control structure's flow in general: 
-https://cdn1.imggmi.com/uploads/2019/7/17/7e9cb6beeef9756b458bb1e1a746b605-full.jpg
+Control structure's flow in general: ![Control strutures's flow](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/decision_making.png)
 
 
 The control structures in elixir are used when one or more conditions need to be specified, and a set of operations must be executed when a condition is met.
@@ -38,7 +37,7 @@ If the Boolean expression evaluates to true or success, then the block of code i
 
 
 **`if`** flow diagram:
-https://cdn1.imggmi.com/uploads/2019/7/17/f5880140a7489fec5208e522aa968744-full.jpg
+![If](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_statement.png)
 
 Example:
 
@@ -87,7 +86,7 @@ end
 If the Boolean expression evaluates to **`true or success`**, then the block of code inside the `if` statement will be executed. If Boolean expression evaluates to **`false or nil`**, then the code after the `else` keyword of the given if statement will be executed.
 
 `If else` flow diagram:
-https://cdn1.imggmi.com/uploads/2019/7/17/3d289e6be5da5e82197113133c16e64e-full.jpg - bad example of an algorithmic structure, the "truthtful/rightful" flow must be the main path
+ ![If ... else](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_else_statement.png) - bad example of an algorithmic structure, the "truthtful/rightful" flow must be the main path
 
 Example:
 ```
@@ -798,22 +797,22 @@ Rules:
   ```
   %{
     "Red" => %{
-      "gk" => {"Ali Baba", 28, "right", 0},
-      "def" => {"Ivan Ivanov", 34, "right", 0},
-      "mid" => {"Eli Marques", 22, "left", 0},
-      "atk" => {"Valeri Bozhinov", 35, "right", 0}
+      "gk" => {"Jody Reeves", 28, "right", 0},
+      "def" => {"Kevin Martinez", 34, "right", 0},
+      "mid" => {"Melvin Montgomery", 22, "left", 0},
+      "atk" => {"Ramon Stokes", 35, "right", 0}
     },
     "Blue" => %{
-      "gk" => {"Zdravko Zdravkov", 48, "left", 0},
-      "def" => {"Elin Topuzakov", 42, "left", 0},
-      "mid" => {"Obi-Wan Kenobi", 18, "right", 0},
-      "atk" => {"Cherno Samba", 32, "left", 0}
+      "gk" => {"Boyd Morris", 48, "left", 0},
+      "def" => {"Nicholas Thomas", 42, "left", 0},
+      "mid" => {"Blake Bradley", 18, "right", 0},
+      "atk" => {"Guadalupe Tran", 32, "left", 0}
     },
     "Green" => %{
-      "gk" => {"Ilko Pirgov", 22, "left", 0},
-      "def" => {"Jackie Chan", 25, "left", 0},
-      "mid" => {"Hali Thiam", 33, "right", 0},
-      "atk" => {"Big Shaq", 20, "left", 0}
+      "gk" => {"Clayton Love", 22, "left", 0},
+      "def" => {"Dennis Rodgers", 25, "left", 0},
+      "mid" => {"Rick Mcdaniel", 33, "right", 0},
+      "atk" => {"Roosevelt Carson", 20, "left", 0}
     }
   }
   ```
@@ -823,22 +822,22 @@ Rules:
   "Red" beats "blue" 2-1 !
   %{
     "Red" => %{
-      "gk" => {"Ali Baba", 28, "right", -1},
-      "def" => {"Ivan Ivanov", 34, "right", 0},
-      "mid" => {"Eli Marques", 22, "left", 0},
-      "atk" => {"Valeri Bozhinov", 35, "right", 2}
+      "gk" => {"Jody Reeves", 28, "right", -1},
+      "def" => {"Kevin Martinez", 34, "right", 0},
+      "mid" => {"Melvin Montgomery", 22, "left", 0},
+      "atk" => {"Ramon Stokes", 35, "right", 2}
     },
     "Blue" => %{
-      "gk" => {"Zdravko Zdravkov", 48, "left", -2},
-      "def" => {"Elin Topuzakov", 42, "left", 0},
-      "mid" => {"Obi-Wan Kenobi", 18, "right", 0},
-      "atk" => {"Cherno Samba", 32, "left", 1}
+      "gk" => {"Boyd Morris", 48, "left", -2},
+      "def" => {"Nicholas Thomas", 42, "left", 0},
+      "mid" => {"Blake Bradley", 18, "right", 0},
+      "atk" => {"Guadalupe Tran", 32, "left", 1}
     },
     "Green" => %{
-      "gk" => {"Ilko Pirgov", 22, "left", 0},
-      "def" => {"Jackie Chan", 25, "left", 0},
-      "mid" => {"Hali Thiam", 33, "right", 0},
-      "atk" => {"Big Shaq", 20, "left", 0}
+      "gk" => {"Clayton Love", 22, "left", 0},
+      "def" => {"Dennis Rodgers", 25, "left", 0},
+      "mid" => {"Rick Mcdaniel", 33, "right", 0},
+      "atk" => {"Roosevelt Carson", 20, "left", 0}
     }
   }
   ```
