@@ -2,7 +2,7 @@
 
 ## Operators/Control structures (if, unless cond, case), 'with' comprehension | Simulation of a 'for' loop using interpolation and comprehension | guards
 
-Control structure's flow in general: ![Control strutures's flow](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/decision_making.png)
+Control structure's flow in general: ![Control strutures's flow](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/decision_making.jpg)
 
 
 The control structures in elixir are used when one or more conditions need to be specified, and a set of operations must be executed when a condition is met.
@@ -37,7 +37,7 @@ If the Boolean expression evaluates to true or success, then the block of code i
 
 
 **`if`** flow diagram:
-![If](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_statement.png)
+![If](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_statement.jpg)
 
 Example:
 
@@ -86,7 +86,7 @@ end
 If the Boolean expression evaluates to **`true or success`**, then the block of code inside the `if` statement will be executed. If Boolean expression evaluates to **`false or nil`**, then the code after the `else` keyword of the given if statement will be executed.
 
 `If else` flow diagram:
- ![If ... else](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_else_statement.png) - bad example of an algorithmic structure, the "truthtful/rightful" flow must be the main path
+ ![If ... else](https://github.com/TodorTodorov525/Elixir-course-summer-2019/blob/master/images/if_else_statement.jpg) - bad example of an algorithmic structure, the "truthtful/rightful" flow must be the main path
 
 Example:
 ```
