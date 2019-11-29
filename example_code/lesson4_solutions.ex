@@ -52,3 +52,17 @@
     [%{name: "Donald", age: 10}, %{name: "Jerry", age: 21}, %{name: "Tom", age: 24}]
     |> Enum.filter(fn person -> person.age > 18 end)
   end
+
+  
+  homework recursion!!!
+  
+      def hw5(list) do
+        itemToString = fn(person) ->
+            %{name: name, age: age} = person
+            "#{name}: #{age} years old"
+        end
+
+        Enum.map_every(list, 1, fn person -> itemToString.(person) end)
+    end
+  
+  
