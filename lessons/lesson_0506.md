@@ -710,7 +710,7 @@ ex2([1,2,3,4], ",")
 ["1,", "2,", "3,", "4,"]
 ```
     
-3. Implement a function, that given a list, an integer, and a value, returns the item, that is at the integer’s position in the list, and if the list has less elements than the list, return the value
+3. Implement a function, that given a list, an integer, and a value, returns the item, that is at the integer’s position in the list, and if the list has less elements than the second argument, return the value
 ```
 ex3([1,2,3], 2, 100)
  3
